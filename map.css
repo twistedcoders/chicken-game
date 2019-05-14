@@ -1,0 +1,9 @@
+body {
+    background-image: url(images/easy4.png)
+}
+
+#steve {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
