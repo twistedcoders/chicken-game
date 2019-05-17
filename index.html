@@ -22,6 +22,22 @@
         </a>
     </p> -->
 
+    <!--
+        read this site:
+        https://flaviocopes.com/speech-synthesis-api/
+    -->
+    <button onclick="speak('Apple', 'en-US')">Apple</button>
+    <button onclick="speak('تفاحة','ar-SA')">تفاحة</button>
+
+    <button onclick="speak('Ciao', 'it-IT')">Ciao</button>
+
+    <script>
+        function speak(text, lang) {
+            let utterance = new SpeechSynthesisUtterance(text)
+            utterance.lang = lang
+            speechSynthesis.speak(utterance)
+        }
+    </script>
 
 </body>
 
