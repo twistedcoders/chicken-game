@@ -39,7 +39,25 @@
         <button onclick="speak('شجرة', 'ar-SA')">شجرة</button>
     </p>
 
+
+    <p>
+        <input id="answer" type="text">
+        <button onclick="checkAnswer()">Submit</button>
+    </p>
+
     <script>
+        function checkAnswer() {
+            let answerInput = document.getElementById("answer")
+
+            if (answerInput.value === "easy") {
+                window.location.href = "easy.html"
+            } else if (answerInput.value === "medium") {
+                window.location.href = "med.html"
+            } else {
+                window.location.href = "hard.html"
+            }
+        }
+
         function speak(text, lang) {
             let utterance = new SpeechSynthesisUtterance(text)
             utterance.lang = lang
